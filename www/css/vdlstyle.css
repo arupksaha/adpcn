@@ -1,0 +1,716 @@
+.adpBanner {
+
+    position: absolute;
+
+    width: 100%;
+
+    height: 85px;
+
+    background: radial-gradient(#00FFFF, #000066);
+
+    margin: auto;
+
+    text-align: center;
+
+    padding-top: 20px;
+
+}
+
+
+.commonHeading {
+
+    width: 93.3%;
+
+    position: absolute;
+
+    margin: auto;
+
+    background-color: white;
+
+    left: 6.1%;
+
+    top: 95px;
+
+    z-index: 1;
+
+    height: 70px;
+
+}
+
+
+
+.backgroundView {
+
+    background-color: #F3F3F3;
+
+    position: absolute;
+
+    width: 5%;
+
+    left: 5.5%;
+
+    top:95px;
+
+    height: 10px;
+
+}
+
+
+
+.mainView {
+
+    width: 90%;
+
+    position: relative;
+
+    margin: auto;
+
+    height: 85px;
+
+
+
+}
+
+.mainHeading {
+
+    font-size: 40px;
+
+    font-family: 'ProximaNova', sans-serif;
+
+    color: #fff;
+
+    font-weight: 200;
+
+    text-decoration: none;
+
+}
+
+
+
+#sampleDivHeight {
+
+    width: 84%;
+
+    position: absolute;
+
+    margin: auto;
+
+    background-color: #F3F3F3;
+
+    left: 10.5%;
+
+    height: 780px;
+
+    overflow-y: scroll;
+
+    overflow-x: hidden;
+
+    max-height: 780px;
+
+    min-height: 700px;
+
+
+
+}
+
+
+
+.innerFrame {
+
+    width: 100%;
+
+    height: 850px;
+
+    position: absolute;
+
+    overflow-y: scroll;
+
+    overflow-x: hidden;
+
+    max-height: 850px;
+
+    min-height: 800px;
+
+}
+
+
+
+.bodySample {
+
+   
+
+    background-position-x: center;
+
+    background-position-y: top;
+
+   background-attachment: fixed;
+
+    background-repeat: no-repeat;
+
+    background-size: cover;
+
+}
+
+
+
+.emptyRow {
+
+                height:10px;
+
+                background-color:#f5f5f5;
+
+                margin-top: 10px
+
+}
+
+
+
+.dashboardHeaderText {
+
+                color: #1a8099;
+
+    padding-left: 20px;
+
+    font-size: 28px;
+
+    font-family: sans-serif;
+
+}
+
+.sidenavtext {
+
+font-family: proxima_nova_rgregular;
+
+}
+
+.contactInfo {
+
+    float: right !important;
+
+}
+
+.liabilityTable {
+                width : 100% !important;
+                margin-top : 10px !important;
+        }
+
+
+
+.liabilityTable td{
+                padding : 5px;
+                text-align : center;
+                font-size : 18px;
+                font-family : 'ProximaNova','sans-serif';
+                color : black;
+}
+span.message-content.ng-binding {
+  font-size: 20px;
+}
+.earningsOutputErrorMessage {
+  font-size: 18px;
+  color: red;
+  border: 1px solid red;
+  text-align: center;
+  background-color: rgba(255, 0, 0, 0.11);
+}
+.earningsCalculateButton {
+  color : white;
+  background-color: #1a8099;
+  width: 150px;
+  font-size: 20px;
+  border: none;
+  margin-top: 10px;
+}
+
+.estimatorTable {
+  border-top: 1px solid #dddddd;
+  border-bottom: 1px solid #dddddd;
+  border-collapse: collapse;
+  width: 100%;
+}
+.estimatorTable td {
+  text-align: left;
+   padding: 8px;
+}
+.estimatorTable th {
+  text-align: left;
+   padding: 8px;
+}
+.custom-class {
+  background-color: #d5d5d5;
+}
+.default-color {
+  background-color: white;
+}
+.estimatorTable tr:first-child {
+    background-color: #dddddd;
+}
+#MgrPageTable tbody > tr.selected{
+  color: #333333;
+  background: none;
+}
+#MgrPageTable tbody > tr:hover {
+  background: none;
+}
+#MgrPageTable td:first-child {
+  font-weight:400;
+}
+#SalesSummaryTable td{
+  line-height: 1;
+}
+#SalesSummaryTable tbody > tr:hover {
+  background: none;
+  cursor: default;
+}
+#DetailTable {
+  overflow: scroll;
+}
+.cnadp-avatar-dropdown {
+    color: #000000;
+    font-size: 20px;
+    text-decoration: none;
+    background-color: transparent;
+}
+.cnadp-job-title {
+  font-size: 12px;
+  margin-top: -5px;
+}
+.cnadp-drilldown {
+  color: #1a8099;
+  font-weight:400;
+}
+.cnadp-no-drilldown {
+  cursor:default !important;
+}
+ul>li.currentPage a:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid #ebebeb;
+    position: absolute;
+    right: 0;
+    top: 25px;
+}
+
+. rcWeekButton {
+  color: black;
+  background-color: white;
+  border-bottom-color: white;
+  width: 90px;
+  text-shadow:none !important;
+  border:none !important;
+  box-shadow:none !important;
+}
+
+/*
+
+* Avatar
+
+*
+
+*/
+
+.cnadp-avatar {
+  font-family: inherit;
+  font-weight: 200;
+  color: #4a4a4a;
+  text-transform: uppercase;
+  background-color: #e4e4e4;
+  overflow: hidden;
+  margin: 0 10px 0;
+  text-align: center;
+  /* Base styling for small avatar icon */
+  /* Base styling for medium avatar icon */
+  /* Base styling for large avatar icon */
+  /* Base styling for extra-large avatar icon */
+}
+
+.cnadp-avatar.cnadp-avatar-sm {
+  width: 50px;
+  border-radius: 50px;
+  border-color: grey;
+  border: solid 1px;
+  font-size: 18px;
+  /* Width and height for img avatar */
+}
+
+.cnadp-avatar.cnadp-avatar-sm img {
+  width: 50px;
+  height: 50px;
+  border-radius: 60px;
+}
+
+.cnadp-pull-left {
+  float: left !important;
+}
+
+.cnadp-col-xs-11 {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+
+
+.cnadp-col-xs-11 {
+
+  width: 98%;
+
+}
+
+
+
+.cnadp-scroll-tab {
+
+    width: 93.3%;
+
+    position: absolute;
+
+    margin: auto;
+
+    background-color: white;
+
+    left: 6.1%;
+
+    top: 165px;
+
+    z-index: 1;
+
+    height: 50px;
+
+}
+
+
+
+
+.adp-title-pane {
+
+  margin-bottom: 25px;
+
+}
+
+.adp-title-pane .collapse-toggle {
+
+  display: block;
+
+  cursor: pointer;
+
+  height: 40px;
+
+  background-color: #bbbbbb;
+
+  margin-bottom: 15px;
+
+}
+
+.adp-title-pane .collapse-toggle:hover,
+
+.adp-title-pane .collapse-toggle:visited,
+
+.adp-title-pane .collapse-toggle:active,
+
+.adp-title-pane .collapse-toggle:link {
+
+  text-decoration: none;
+
+}
+
+.adp-title-pane .collapse-toggle .fa {
+
+  color: #1a8099;
+
+  margin-left: 10px;
+
+  margin-right: 20px;
+
+  margin-top: 10px;
+
+}
+
+.view-enter, .view-leave {
+
+  position: absolute;
+
+  -webkit-transition:all .5s ease-in-out;
+
+  -moz-transition:all .5s ease-in-out;
+
+  -o-transition:all .5s ease-in-out;
+
+  transition:all .5s ease-in-out;
+
+}
+
+
+
+.view-enter {
+
+  opacity: 0;
+
+  -webkit-transform:scale3d(0.5, 0.5, 0.5);
+
+  -moz-transform:scale3d(0.5, 0.5, 0.5);
+
+  transform:scale3d(0.5, 0.5, 0.5);
+
+}
+
+
+
+.view-enter-active {
+
+  opacity: 1;
+
+  -webkit-transform:scale3d(1, 1, 1);
+
+  -moz-transform:scale3d(1, 1, 1);
+
+  transform:scale3d(1, 1, 1);
+
+}
+
+
+
+.view-leave {
+
+  opacity: 1;
+
+  /*padding-left: 0px;*/
+
+  -webkit-transform:translate3d(0, 0, 0);
+
+  -moz-transform:translate3d(0, 0, 0);
+
+  transform:translate3d(0, 0, 0);
+
+}
+
+
+
+.view-leave-active {
+
+  opacity: 0;
+
+  /*padding-left: 100px;*/
+
+  -webkit-transform:translate3d(100px, 0, 0);
+
+  -moz-transform:translate3d(100px, 0, 0);
+
+  transform:translate3d(100px, 0, 0);
+
+}
+
+
+
+/*!/ VDL Pattern Library | v1.7.2 | 2016-05-23 */
+
+/* VDL Tabs */
+
+.graph-toggle-tabs .tabs-container > ul {
+
+  margin: 0;
+
+  padding: 0;
+
+}
+
+.graph-toggle-tabs .tabs-container > ul:after:before,
+
+.graph-toggle-tabs .tabs-container > ul:after:after {
+
+  content: " ";
+
+  display: table;
+
+}
+
+.graph-toggle-tabs .tabs-container > ul:after:after {
+
+  clear: both;
+
+}
+
+.graph-toggle-tabs .tabs-container > ul > li {
+
+  list-style: none;
+
+  margin: 0;
+
+}
+
+.graph-toggle-tabs .tabs-container > ul > li > a,
+
+.graph-toggle-tabs .tabs-container > ul > li > div {
+  padding: 5px 15px;
+  font-size: 16px;
+  color: #000000;
+  background-color: #ffffff;
+  display: block;
+  font-family: inherit;
+  font-weight: 300;
+  border-radius: 0;
+  border-right: 1px solid #bbbbbb;
+}
+
+.graph-toggle-tabs .tabs-container > ul > li > a:hover,
+
+.graph-toggle-tabs .tabs-container > ul > li > div:hover,
+
+.graph-toggle-tabs .tabs-container > ul > li > a:focus,
+
+.graph-toggle-tabs .tabs-container > ul > li > div:focus {
+
+  text-decoration: underline;
+
+}
+
+.graph-toggle-tabs .tabs-container > ul > li .fa-exclamation-circle {
+
+  color: #d40f0f;
+
+}
+
+.graph-toggle-tabs .tabs-container > ul > li.active > a,
+
+.graph-toggle-tabs .tabs-container > ul > li.active > div {
+
+  color: #000000;
+
+}
+
+.graph-toggle-tabs .tabs-container > ul > li.active > div:hover {
+
+  background-color: #3ebede;
+
+  color: #ffffff;
+
+}
+
+.graph-toggle-tabs .tabs-container > ul > li.active > a:focus,
+
+.graph-toggle-tabs .tabs-container > ul > li.active > div:focus {
+
+  background-color: #1a8099;
+
+}
+
+.graph-toggle-tabs .tabs-container > ul > li.active .fa-exclamation-circle {
+
+  color: #ffffff;
+
+}
+
+.graph-toggle-tabs .tabs-container .tab-content {
+
+  padding: 15px;
+
+}
+
+.graph-toggle-tabs.horizontal .tabs-container > ul {
+
+  border-bottom: none;
+
+}
+
+.graph-toggle-tabs.horizontal .tabs-container > ul li {
+
+  display: inline-block;
+
+}
+
+.graph-toggle-tabs.vertical .tabs-container > ul {
+
+  border-right: 4px solid #1a8099;
+
+  margin-right: 15px;
+
+  float: left;
+
+  min-width: 220px;
+
+}
+
+.graph-toggle-tabs.vertical .tabs-container > ul li {
+
+  margin: 0 0 2px;
+
+  display: block;
+
+}
+
+.graph-toggle-tabs.vertical .tabs-container > ul li:last-child {
+
+  margin: 0;
+
+}
+
+.graph-toggle-tabs.vertical .tabs-container > ul li > a {
+
+  border-radius: 0;
+
+}
+
+.graph-toggle-tabs .tabs-container > ul > li:last-child > a {
+  border-right: none;
+}
+.graph-toggle-tabs.horizontal .tabs-container .nav-tabs > li.active > a{
+  border-right: 1px solid #bbbbbb;
+  border-left: none;
+  border-top: none;
+  background: none;
+  text-decoration: underline;
+}
+.graph-toggle-tabs.horizontal .tabs-container .nav-tabs > li:last-child.active > a{
+  border: none;
+  background: none;
+}
+.graph-toggle-tabs.vertical .tabs-container .tab-content:before,
+
+.graph-toggle-tabs.vertical .tabs-container .tab-content:after {
+
+  content: " ";
+
+  display: table;
+
+}
+
+.graph-toggle-tabs.vertical .tabs-container .tab-content:after {
+  clear: both;
+}
+
+.graph-toggle-tabs.vertical:first-child {
+  margin-top: 0;
+}
+
+.graph-toggle-tabs.vertical:last-child {
+  margin-bottom: 0;
+}
+
+.cnadp-scroll-tab-klr {
+    width: 100%;
+    position: absolute;
+    margin: auto;
+    background-color: Red;
+    left: 6.1%;
+    top: 165px;
+    z-index: 1;
+    height: 50px;
+}
+
+[ng\:cloak], [ng-cloak], .ng-cloak {
+  display: none !important;
+}
+.adp-slidein {
+  padding: 0 !important;
+  left: 79% !important;
+}
+.sortorder:after {
+  content: '\25b2';   // BLACK UP-POINTING TRIANGLE
+}
+.sortorder.reverse:after {
+  content: '\25bc';   // BLACK DOWN-POINTING TRIANGLE
+}

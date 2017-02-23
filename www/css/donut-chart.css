@@ -1,0 +1,129 @@
+.donutClass {
+    float: left;
+    width: 33%;
+}
+.mainDiv {
+    display: table;
+    margin: 0 auto;
+    top: 10px;
+}
+.textShow {
+    font-size: 40px;
+    position: absolute;
+    z-index: 1;
+    margin-left: 10%;
+    margin-top : 8%;
+    text-align: center;
+    width: 150px;
+    
+}
+.labelShow {
+    font-size: 25px;
+    position: absolute;
+    z-index: 1;
+    margin-left: 11%;
+    margin-top : 11.5%;
+    text-align: center;
+	color: #888888;
+    width: 100px;
+    
+}
+.bottomLabelShow {
+    font-size: 15px;
+	margin-left: 33%;
+    text-align: center;
+	color: #888888;
+    width: 100px;   
+}
+.bottomTextShowSales {
+    font-size: 20px;
+	margin-left: 5%;
+    text-align: center;
+	color: black;
+    width: 100px;   
+}
+.bottomTextShowQuota {
+    font-size: 20px;
+	margin-left: 4%;
+    text-align: center;
+	color: black;
+    width: 100px;   
+}
+.export {
+    font-size: 15px;
+	margin-right: 4%;
+    text-align: center;
+	color: black;
+    width: 100px;   
+}
+
+.WTD {
+    min-height:230px
+}
+.MTD {
+    min-height:230px
+}
+.YTD {
+    min-height:230px
+}
+
+/*
+.WTD > div > div > svg > g > g > path:first-child{
+	fill: #3ebede;
+}
+.MTD > div > div > svg > g > g > path:first-child{
+	fill: #530067;
+}
+.YTD > div > div > svg > g > g > path:first-child{
+	fill: #f47b13;
+}
+.WTD > div > div > svg > g > g > path:last-child{
+	fill: #dcdcdc;
+}
+.MTD > div > div > svg > g > g > path:last-child{
+	fill: #dcdcdc;
+}
+.YTD > div > div > svg > g > g > path:last-child{
+	fill: #dcdcdc;
+}
+.donutClass > div > div > svg > g > g > path:last-child{
+    fill: #dcdcdc;
+}
+.donutClass > div > div > svg > g > path {
+    fill: #ffffff;
+}
+.donutClass > div > div > svg > rect {
+    fill: #f3f3f3;
+}
+*/
+.WTD > div > div > svg > g > g > path:first-child{
+    fill: #3ebede;
+}
+.MTD > div > div > svg > g > g > path:first-child{
+    fill: #530067;
+}
+.YTD > div > div > svg > g > g > path:first-child{
+    fill: #f47b13;
+}
+.WTD > div > div > svg > g > g > path:last-child{
+    fill: #dcdcdc;
+}
+.MTD > div > div > svg > g > g > path:last-child{
+    fill: #dcdcdc;
+}
+.YTD > div > div > svg > g > g > path:last-child{
+    fill: #dcdcdc;
+}
+.donutClass > div > svg > g > g > path:last-child{
+	fill: #dcdcdc;
+}
+.donutClass > div > svg > g > path {
+	fill: #ffffff;
+}
+.donutClass > div > svg > rect {
+	fill: #f3f3f3;
+}
+
+
+
+

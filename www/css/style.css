@@ -1,0 +1,23 @@
+/* Empty. Add your own CSS if you like */
+.col-16, .col-17 {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 16.66667%;
+  -moz-box-flex: 0;
+  -moz-flex: 0 0 16.66667%;
+  -ms-flex: 0 0 16.66667%;
+  flex: 0 0 16.66667%;
+  max-width: 16.66667%; }
+
+  .col-13, .col-14 {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 13.33333%;
+  -moz-box-flex: 0;
+  -moz-flex: 0 0 13.33333%;
+  -ms-flex: 0 0 13.33333%;
+  flex: 0 0 13.33333%;
+  max-width: 13.33333%; }
+
+ .swiper-container {
+        width: 100%;
+        height: 100%;
+    }

@@ -1,0 +1,274 @@
+<ion-view view-title="Rollcall">
+  <ion-content>
+  <ion-scroll style="max-height:100vh;">
+  <div class="list card">
+
+  <div class="item item-avatar">
+    <img ng-if="userPhoto" ng-src={{userPhoto}}>
+    <h2 ng-if="associateName"style="text-align:left;">{{associateName}}</h2>
+    <p ng-if="title" style="text-align:left;">{{title}}</p>
+    
+    <div class="list" style="float: right;" ng-controller="buttonDropdownController">
+<p style="text-align:right;">Week
+      <i class="fa fa-calendar" style="color:#1a8099"></i>
+      &nbsp;RC Week - <strong ng-if="selectedItem.WEEK_CODE">{{selectedItem.WEEK_CODE.slice(-2)}} | </strong> Month : <strong ng-if="monthandYear"> {{selectedItem.MON_CODE}} </strong>
+  </p>
+  <label class="item item-input item-select">
+    <div class="input-label">
+      
+    </div>
+    <select ng-options="rollcallWeek as rollcallWeek.Week for rollcallWeek in rollcallWeeks track by rollcallWeek.WEEK_CODE" ng-model="selectedItem" ng-change="setRCWeek()">
+      
+      
+    </select>
+    <!--select>
+      <option ng-repeat="rollcallWeek in rollcallWeeks">
+        <a ng-click="setRCWeek(rollcallWeek)">{{ rollcallWeek.Week }}</a>
+      </option>
+    </select-->
+  </label>
+
+</div>
+  </div>
+
+  
+
+  <div class="title"><h2> Sales Summary<h2></div>
+  <div class="item-body adp-box bg-white" >
+   <div class="swiper-container"> 
+    <ion-slides  options="options" slider="slider" style="height: 40vh">
+    <ion-slide-page>
+
+    <div class="list" ng-controller="donutChartCtrl">
+
+  <div class="item row">
+   <div class="col-20 WTD"> 
+    <highchart id="donutChartWTD" config="chartConfigWTD" class="img-responsive" ng-if="WPT >=0">  </highchart>
+                 
+  
+                 
+ </div>
+ <div class="col-13 col-center">
+    
+                      <span style="text-align:center; color: #888888;" ng-if="WN">SALES 
+                        <span style="text-align:center; color: black;" ng-if="WN"><BR>{{WN}}
+                        </span>
+                      </span> 
+                      <br/>
+                      <span style="text-align:center; color: #888888;" ng-if="WQ">QUOTA 
+                        <span style="text-align:center; color: black;" ng-if="WQ"><BR>{{WQ}}
+                        </span>
+                      </span> 
+              
+ </div>
+  <div class="col-20 MTD">
+    <highchart id="donutChartMTD" config="chartConfigMTD" class="img-responsive" ng-if="MPT >=0">  </highchart>
+                   
+  
+                   
+ </div>
+ <div class="col-13 col-center">
+   
+        
+                      <span style="text-align:center; color: #888888;" ng-if="MN">SALES 
+                        <span style="text-align:center; color: black;" ng-if="MN"><BR>{{MN}}
+                        </span>
+                      </span> 
+                      <br/>
+                      <span style="text-align:center; color: #888888;" ng-if="MQ">QUOTA 
+                        <span style="text-align:center; color: black;" ng-if="MQ"><BR>{{MQ}}
+                        </span>
+                      </span> 
+     
+                   
+ </div>
+  <div class="col-20 YTD"> 
+    <highchart id="donutChartYTD" config="chartConfigYTD" class="img-responsive" ng-if="YPT >=0">  </highchart>   
+                
+ </div>
+<div class="col-13 col-center">
+   
+        
+                      <span style="text-align:center; color: #888888;" ng-if="YN">SALES 
+                        <span style="text-align:center; color: black;" ng-if="YN"><BR>{{YN}}
+                        </span>
+                      </span> 
+                      <br/>
+                      <span style="text-align:center; color: #888888;" ng-if="YQ">QUOTA 
+                        <span style="text-align:center; color: black;" ng-if="YQ"><BR>{{YQ}}
+                        </span>
+                      </span> 
+     
+                   
+ </div>
+</div>
+
+
+</div>
+
+</ion-slide-page>
+   <ion-slide-page>
+      <div class="list" ng-controller="lineChartCtrl">
+
+  <div class="item  row responsive-lg">
+   <div class="col">
+    <div class="graph-toggle-tabs horizontal">
+                    <uib-tabset class="tabs-container">
+                      <uib-tab heading="Sales" ng-click="changeGraph('SALES')">                       
+                      </uib-tab>
+                      <uib-tab heading="YTD%" ng-click="changeGraph('YTD')">
+                      </uib-tab>
+                    </uib-tabset>
+                    <a>
+                      <highchart id="SalesContainer" config="chartConfig" class="img-responsive" ng-click="showSalesGraphData()"></highchart>
+                    </a>
+                  </div>  
+  </div>
+</div>
+</div>
+    </ion-slide-page>
+  </ion-slides>
+
+
+ <div class="adp-tabs horizontal">
+  <uib-tabset class="tabs-container">
+							<uib-tab  ng-repeat="tab in tabs" heading={{tab.TAB_NAME}} ng-click="getSelectedTabData(tab.TAB_CODE)">
+							
+							</uib-tab> 
+  </uib-tabset>
+<!--/div-->
+  
+
+
+<div class="list card">
+
+
+  <label class="item item-input-inset">
+
+    <select ng-options="period as period.meaning for period in periods track by period.name" ng-model="selectedPeriod" ng-change="setMaster()">
+      
+    </select>
+    <!--select>
+      
+      <option ng-repeat="period in periods">
+          <a ng-click="setMaster(period)">{{ period.name }}</a>
+      </option>
+    </select-->
+  </label>
+<!--/div-->
+
+<!--/div-->
+
+    <!--div class="list"-->
+        
+        <!--div class="list" ng-table="tableParams" template-pagination="custom-pager.html" show-filter="false" id="MgrPageTable" ng-repeat="table in tables">
+                      <div class="item item-divider row">
+                        <div class="col" ng-repeat="column in colNames" style="border-bottom:1px solid #000000;text-transform:uppercase;color:#6a6a6a;font-weight:400;padding:10px;text-align:left">{{column}}</div>
+                      </div>
+                      <div class="item item-divider row" ng-show="table.rows!='undefined' && table.rows!='null' && table.rows.length!=0" ng-repeat="user in table.rows" data-ng-click="selectRow($event)" data-ng-class="{selected: selectedRows.indexOf(user) > -1}">
+                        <div class="col" ng-repeat="column in table.cols" ng-click="addNavigationPathToArray(user.ASSOCIATE_ID, user.DRILLDOWN_MODE, user.GETTYPE, column, user.BU)" data-ng-class="{'cnadp-drilldown': isDrillDownExists(column,user.ASSOCIATE_ID) , 'cnadp-no-drilldown': !isDrillDownExists(column,user.ASSOCIATE_ID)}">
+                        {{user[column]}}</div>
+                      </div>
+                      <div class="item item-divider row">        
+                        <div class="col" ng-show="table.rows =='undefined' || table.rows=='null' || table.rows.length==0" style="text-align:center">
+                          No records found. 
+                        </div>
+                      </div>
+                    </div-->      
+    
+    <div class="item item-divider row">
+    
+      <div class="col-20" ng-if="tabCode==='TAB_SEVP'">
+        <button class="button  button-stable"  ng-click="sortBy('NAME',false)">Name</button>
+        <span class="sortorder" ng-show="propertyName === 'NAME'" ng-class="{reverse: reverse}"></span>
+     </div>
+     <div class="col-20" ng-if="tabCode==='TAB_DM'">
+        <button class="button  button-stable"  ng-click="sortBy('NAME',false)">Name</button>
+        <span class="sortorder" ng-show="propertyName === 'NAME'" ng-class="{reverse: reverse}"></span>
+     </div>
+     <div class="col-20" ng-if="tabCode==='TAB_OFF'">
+        <button class="button  button-stable" ng-click="sortBy('SO',false)">Name</button>
+        <span class="sortorder" ng-show="propertyName === 'SO'" ng-class="{reverse: reverse}"></span>
+      </div>
+
+      <div class="col-20" ng-if="tabCode==='TAB_SEVP'">
+        <button class="button  button-stable"  ng-click="sortBy('RNAME',false)">Role</button>
+        <span class="sortorder" ng-show="propertyName === 'RNAME'" ng-class="{reverse: reverse}"></span>
+     </div>
+     <div class="col-20" ng-if="tabCode==='TAB_OFF'">
+        <button class="button  button-stable"  ng-click="sortBy('SOC',false)">Sales Office</button>
+        <span class="sortorder" ng-show="propertyName === 'SOC'" ng-class="{reverse: reverse}"></span>
+
+    </div>
+     <div class="col-20" ng-if="tabCode==='TAB_DM'">
+        <button class="button  button-stable"  ng-click="sortBy('SOC',false)">Sales Office</button>
+        <span class="sortorder" ng-show="propertyName === 'SOC'" ng-class="{reverse: reverse}"></span>
+
+      </div>
+
+      <div class="col-20">
+        <button class="button  button-stable" ng-if="selectedPeriod.name==='WTD'" ng-click="sortBy('WN',true)">Net Sales
+        <span class="sortorder" ng-show="propertyName === 'WN'" ng-class="{reverse: reverse}"></span></button>
+
+        <button class="button  button-stable" ng-if="selectedPeriod.name==='MTD'" ng-click="sortBy('MN',true)">Net Sales
+        <span class="sortorder" ng-show="propertyName === 'MN'" ng-class="{reverse: reverse}"></span></button>
+
+        <button class="button  button-stable" ng-if="selectedPeriod.name==='YTD'" ng-click="sortBy('YN',true)">Net Sales
+        <span class="sortorder" ng-show="propertyName === 'YN'" ng-class="{reverse: reverse}"></span></button>
+
+      </div>
+      <div class="col-20">
+        <button class="button  button-stable" ng-if="selectedPeriod.name==='WTD'" ng-click="sortBy('WQ',true)">Quota
+        <span class="sortorder" ng-show="propertyName === 'WQ'" ng-class="{reverse: reverse}"></span></button>
+
+        <button class="button  button-stable" ng-if="selectedPeriod.name==='MTD'" ng-click="sortBy('MQ',true)">Quota
+        <span class="sortorder" ng-show="propertyName === 'MQ'" ng-class="{reverse: reverse}"></span></button>
+
+        <button class="button  button-stable" ng-if="selectedPeriod.name==='YTD'" ng-click="sortBy('YQ',true)">Quota
+        <span class="sortorder" ng-show="propertyName === 'YQ'" ng-class="{reverse: reverse}"></span></button>
+      </div>
+     <div class="col-20">
+        <button class="button  button-stable" ng-if="selectedPeriod.name==='WTD'" ng-click="sortBy('WPT',true)">%Achieved
+        <span class="sortorder" ng-show="propertyName === 'WPT'" ng-class="{reverse: reverse}"></span></button>
+
+        <button class="button  button-stable" ng-if="selectedPeriod.name==='MTD'" ng-click="sortBy('MPT',true)">%Achieved
+        <span class="sortorder" ng-show="propertyName === 'MPT'" ng-class="{reverse: reverse}"></span></button>
+
+        <button class="button  button-stable" ng-if="selectedPeriod.name==='YTD'" ng-click="sortBy('YPT',true)">%Achieved
+        <span class="sortorder" ng-show="propertyName === 'YPT'" ng-class="{reverse: reverse}"></span></button>
+      </div> 
+  
+</div>
+
+  <div class="item item-divider row" ng-repeat="row in data | orderBy:propertyName:reverse">
+    
+      <a class="col-20" ui-sref="app.Rollcall({unqId : row.ASSOCIATE_ID})" ng-if="tabCode==='TAB_SEVP'">{{row.NAME}}</a>
+      <a class="col-20" ui-sref="app.Rollcall({unqId : row.ASSOCIATE_ID})" ng-if="tabCode==='TAB_DM'">{{row.NAME}}</a>
+      <a class="col-20" ui-sref="app.Rollcall({unqId : row.SOC})" ng-if="tabCode==='TAB_OFF'">{{row.SO}}</a>
+
+      <a class="col-20" ng-if="tabCode==='TAB_SEVP'">{{row.RNAME}}</a>
+      <a class="col-20" ng-if="tabCode==='TAB_OFF'">{{row.SOC}}</a>
+      <a class="col-20" ng-if="tabCode==='TAB_DM'">{{row.SOC}}</a>
+
+      <a class="col-20" ng-if="selectedPeriod.name==='WTD'">{{row.WN }}</a>
+      <a class="col-20" ng-if="selectedPeriod.name==='WTD'">{{row.WQ }}</a>
+      <a class="col-20" href="#" ng-if="selectedPeriod.name==='WTD'">{{row.WPT}}</a>
+
+      <a class="col-20" ng-if="selectedPeriod.name==='MTD'">{{row.MN }}</a>
+      <a class="col-20" ng-if="selectedPeriod.name==='MTD'">{{row.MQ }}</a>
+      <a class="col-20" ng-if="selectedPeriod.name==='MTD'">{{row.MPT}}</a>
+
+      <a class="col-20" ng-if="selectedPeriod.name==='YTD'">{{row.YN }}</a>
+      <a class="col-20" ng-if="selectedPeriod.name==='YTD'">{{row.YQ }}</a>
+      <a class="col-20" ng-if="selectedPeriod.name==='YTD'">{{row.YPT}}</a>
+
+  </div>
+
+</div>
+
+</div>
+
+</div>
+</ion-scroll>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,40 @@
+angular.module('starter.factory', [])
+.factory('adpcnFactory', [function () {
+	var fac = {};
+	fac.selectedPeriod = 'WTD';
+	fac.periods = [
+        {name: 'WTD'},
+        {name: 'MTD'},
+        {name: 'YTD'}
+    ];
+	fac.rcdata = [];
+	fac.sldata = [];
+	fac.slproddata = [];
+	fac.slcustdata = [];
+fac.slheaderdetdata={};
+fac.slheaderdata= [];
+	fac.currentPageName = 'Dashboard';
+	fac.rollcallWeeksArray = [];
+	fac.slperiodsArray = [];
+	fac.currentRCWeek;
+	fac.currentslperiod=[];
+	fac.selectedslperiod=[];
+	fac.selectedslnum='3';
+	fac.tabName = 'MyTeam';
+	fac.userAccessData = [];
+	fac.navigationPathArray = [];
+	fac.navigationCounter = 0;
+	fac.getType = 'NULL';
+	fac.unqId;
+	fac.userID = '';
+	fac.rcGraphPeriods = [
+        {name: 'MTD'},
+        {name: 'YTD'}
+    ];
+	fac.selectedRcGraphPeriod = 'MTD';
+	fac.earningsPeriodArray = [];
+	fac.earningsMonth = '';
+	fac.inputFieldsOfEarningsArray = [];
+	fac.roleInformationArray = [];
+  return fac;
+}]);

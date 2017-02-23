@@ -1,0 +1,198 @@
+/*!/ VDL Pattern Library | v1.7.2 | 2016-05-23 */
+/* VDL Tabs */
+.adp-tabs .tabs-container > ul {
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+.adp-tabs .tabs-container > ul:after:before,
+.adp-tabs .tabs-container > ul:after:after {
+  content: " ";
+  display: table;
+}
+.adp-tabs .tabs-container > ul:after:after {
+  clear: both;
+}
+.adp-tabs .tabs-container > ul > li {
+  list-style: none;
+  margin: 0;
+}
+.adp-tabs .tabs-container > ul > li > a,
+.adp-tabs .tabs-container > ul > li > div {
+  padding: 5px 15px;
+  font-size: 16px;
+  color: #000000;
+  background-color: #ffffff;
+  display: block;
+  font-family: inherit;
+  font-weight: 300;
+  border-radius: 0;
+}
+.adp-tabs .tabs-container > ul > li > a:hover,
+.adp-tabs .tabs-container > ul > li > div:hover,
+.adp-tabs .tabs-container > ul > li > a:focus,
+.adp-tabs .tabs-container > ul > li > div:focus {
+  background-color: #3ebede;
+  color: #000000;
+  text-decoration: none;
+}
+.adp-tabs .tabs-container > ul > li .fa-exclamation-circle {
+  color: #d40f0f;
+}
+.adp-tabs .tabs-container > ul > li.active > a,
+.adp-tabs .tabs-container > ul > li.active > div {
+  background-color: #1a8099;
+  color: #ffffff;
+}
+.adp-tabs .tabs-container > ul > li.active > a:hover,
+.adp-tabs .tabs-container > ul > li.active > div:hover {
+  background-color: #3ebede;
+  color: #ffffff;
+}
+.adp-tabs .tabs-container > ul > li.active > a:focus,
+.adp-tabs .tabs-container > ul > li.active > div:focus {
+  background-color: #1a8099;
+}
+.adp-tabs .tabs-container > ul > li.active .fa-exclamation-circle {
+  color: #ffffff;
+}
+.adp-tabs .tabs-container .tab-content {
+  padding: 15px;
+}
+.adp-tabs.horizontal .tabs-container > ul {
+  border-bottom: 4px solid #1a8099;
+}
+.adp-tabs.horizontal .tabs-container > ul li {
+  display: inline-block;
+}
+.adp-tabs.vertical .tabs-container > ul {
+  border-right: 4px solid #1a8099;
+  margin-right: 15px;
+  float: left;
+  min-width: 220px;
+}
+.adp-tabs.vertical .tabs-container > ul li {
+  margin: 0 0 2px;
+  display: block;
+}
+.adp-tabs.vertical .tabs-container > ul li:last-child {
+  margin: 0;
+}
+.adp-tabs.vertical .tabs-container > ul li > a {
+  border-radius: 0;
+}
+.adp-tabs.vertical .tabs-container .tab-content:before,
+.adp-tabs.vertical .tabs-container .tab-content:after {
+  content: " ";
+  display: table;
+}
+.adp-tabs.vertical .tabs-container .tab-content:after {
+  clear: both;
+}
+.adp-tabs.vertical:first-child {
+  margin-top: 0;
+}
+.adp-tabs.vertical:last-child {
+  margin-bottom: 0;
+}
+/* On White */
+.bg-white .adp-tabs .tabs-container > ul > li > a,
+.bg-white .adp-tabs .tabs-container > ul > li > div {
+  background-color: #e4e4e4;
+}
+.bg-white .adp-tabs .tabs-container > ul > li > a:hover,
+.bg-white .adp-tabs .tabs-container > ul > li > div:hover,
+.bg-white .adp-tabs .tabs-container > ul > li > a:focus,
+.bg-white .adp-tabs .tabs-container > ul > li > div:focus {
+  background-color: #3ebede;
+}
+.bg-white .adp-tabs .tabs-container > ul > li.active > a,
+.bg-white .adp-tabs .tabs-container > ul > li.active > div {
+  background-color: #1a8099;
+}
+/* Scrollable Tabs */
+.adp-scrollable-tabs .ui-tabs-scrollable > .spacer > div:first-child > .tab-content {
+  border: none;
+}
+.adp-scrollable-tabs .ui-tabs-scrollable > .spacer > div:first-child > .nav-tabs > li > a {
+  height: 50px;
+}
+.adp-scrollable-tabs .ui-tabs-scrollable .nav-button {
+  line-height: 50px;
+  height: 49px;
+}
+.adp-scrollable-tabs .ui-tabs-scrollable .nav-button.left-nav-button,
+.adp-scrollable-tabs .ui-tabs-scrollable .nav-button.right-nav-button {
+  color: #ffffff;
+  border: none;
+  min-width: 0;
+}
+.adp-scrollable-tabs .ui-tabs-scrollable .nav-button.left-nav-button:before,
+.adp-scrollable-tabs .ui-tabs-scrollable .nav-button.right-nav-button:before {
+  font-family: 'FontAwesome';
+}
+.adp-scrollable-tabs .ui-tabs-scrollable .nav-button.left-nav-button {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1a8099+0,1a8099+100&1+0,0+100 */
+  background: -moz-linear-gradient(left, #1a8099 0%, rgba(26, 128, 153, 0) 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #1a8099 0%, rgba(26, 128, 153, 0) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #1a8099 0%, rgba(26, 128, 153, 0) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1a8099', endColorstr='#001a8099', GradientType=1);
+  /* IE6-9 */
+}
+.adp-scrollable-tabs .ui-tabs-scrollable .nav-button.left-nav-button:before {
+  content: "\f053";
+}
+.adp-scrollable-tabs .ui-tabs-scrollable .nav-button.right-nav-button {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1a8099+0,1a8099+100&0+0,1+100 */
+  background: -moz-linear-gradient(left, rgba(26, 128, 153, 0) 0%, #1a8099 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, rgba(26, 128, 153, 0) 0%, #1a8099 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, rgba(26, 128, 153, 0) 0%, #1a8099 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#001a8099', endColorstr='#1a8099', GradientType=1);
+  /* IE6-9 */
+}
+.adp-scrollable-tabs .ui-tabs-scrollable .nav-button.right-nav-button:before {
+  content: "\f054";
+}
+.adp-scrollable-tabs .ui-tabs-scrollable > .spacer:not(.hidden-buttons) {
+  margin: 0;
+}
+.adp-scrollable-tabs .ui-tabs-scrollable .tabs-container .nav-tabs {
+  background: #1a8099;
+  height: 50px;
+}
+.adp-scrollable-tabs .ui-tabs-scrollable .tabs-container .nav-tabs > li {
+  margin-top: 0;
+}
+.adp-scrollable-tabs .ui-tabs-scrollable .tabs-container .nav-tabs > li > a {
+  color: #ffffff;
+  line-height: 1.9em;
+  padding: 10px 25px;
+}
+.adp-scrollable-tabs .ui-tabs-scrollable .tabs-container .nav-tabs > li > a:hover,
+.adp-scrollable-tabs .ui-tabs-scrollable .tabs-container .nav-tabs > li > a:active {
+  background: transparent;
+  border-color: transparent;
+}
+.adp-scrollable-tabs .ui-tabs-scrollable .tabs-container .nav-tabs > li.active > a {
+  background: transparent;
+  border: none;
+  font-weight: 400;
+}
+.adp-scrollable-tabs .ui-tabs-scrollable .tabs-container .nav-tabs > li.active > a:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 10px 10px 10px;
+  border-color: transparent transparent #f5f5f5 transparent;
+  position: absolute;
+  right: 50%;
+  top: 39px;
+  margin-right: -10px;
+}

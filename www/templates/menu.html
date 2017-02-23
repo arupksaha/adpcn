@@ -1,0 +1,111 @@
+
+<!-- adp-dashboard-container -->
+      <div class="adp-dashboard-container animate">
+<ion-side-menus enable-menu-with-back-views="false">
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-stable">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+<div class="list">
+  <!--div class="list list-inset"-->
+    <!--div class="list"-->
+
+  
+
+  <!--button class="button button-stable">
+      <i class="icon ion-calendar"></i>
+    </button-->
+
+    <div class="item item-image page-content condensed" >
+    <ion-nav-view name="menuContent"></ion-nav-view>
+  </div>
+
+<!--a class="item">
+    <i></i>
+    
+  </a-->
+  <!--/div-->
+<!--/div-->
+
+    
+
+</div>
+  </ion-side-menu-content>
+
+<!-- Sidebar -->
+        <!--div class="page-sidebar nav vertical animate"-->
+  <ion-side-menu expose-aside-when="large" width="86">
+    <ion-header-bar class="bar-stable">
+      <h1 class="title">Menu</h1>
+    </ion-header-bar>
+    
+    <!--ion-content-->
+      <!-- Sidebar -->
+        <div class="page-sidebar nav vertical animate">
+          <!-- Menu -->             
+          <ul class="menu">
+            <li id= "blank">
+              <a class="item fill-icon"><i class="icon"></i></a>
+            </li>
+            <li id= "home">
+              <a class="sideBarHomePageLink item fill-icon" href="../OA.jsp?OAFunc=OAHOMEPAGE">
+                <i class="icon fa fa-home"></i>
+                <span class="txt"><BR>Home</span> 
+              </a>
+            </li>         
+            <li id= "dashboard">
+                <a class="item fill-icon" ui-sref="app.browse">
+                <i class="icon fa fa-dashboard"></i>
+                <span class="txt"><BR>Dashboard</span> 
+              </a>
+            </li>
+            
+            <!--li id= "rollcall">
+                <a class="item fill-icon" ui-sref="app.playlists">
+                <i class="icon fa fa-line-chart"></i>
+                <span class="txt"><BR>RollCall</span> 
+              </a>
+            </li>
+            
+            <li id= "liability">
+                <a class="item fill-icon" ui-sref="app.search">
+                <i class="icon fa fa-car"></i>
+                <span class="txt"><BR>Sales Liability</span> 
+              </a>
+            </li>
+
+            <li id= "summary">
+                <a class="item fill-icon" ui-sref="Summary">
+                <i class="icon fa fa-dollar"></i>
+                <span class="txt"><BR>YTD Summary</span>
+              </a>
+            </li-->
+            <li ng-repeat="navigationItemName in userAccesInfo" ng-init="routeName = navigationItemName['ROUTE']" ng-attr-id="{{navigationItemName['DBNAME']}}" >
+              <a ui-sref={{routeName}} href="#" ng-click="saveSelectedRoute($index)" data-ng-class="{'nav-arrow-first': isActive(navigationItemName['ROUTE']), 'nav-arrow': !isActive(navigationItemName['ROUTE'])}">
+                <i ng-class="setImage(navigationItemName['DBNAME'])"></i>
+                <span class="txt">{{navigationItemName["DBNAME"]}} </span>
+              </a>
+            </li>
+            <li id="OracleLogoutLI">
+              <a id="SidebarLogoutLink" class="item fill-icon" href="../OALogout.jsp">   
+                <i class="icon fa fa-power-off"></i> 
+                <span class="txt"><BR>Logout</span>
+              </a>  
+            </li>
+          </ul>
+          <!-- End Menu -->   
+        </div>
+        <!-- End Sidebar -->
+    <!--/ion-content-->
+  </ion-side-menu>
+<!--/div-->
+
+</ion-side-menus>
+<!--/div-->
+</div>

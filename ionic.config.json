@@ -1,0 +1,16 @@
+{
+  "name": "adpcn",
+  "app_id": "c6834626",
+  "proxies": [
+    {
+      "path": "/loginonget.fcc",
+      "proxyUrl": "https://spmdit1.nj.adp.com/siteminderagent/forms/loginonget.fcc",
+      "rejectUnauthorized": false
+    },
+    {
+      "path": "/userAccess",
+      "proxyUrl": "https://spmdit1.nj.adp.com/userAccess",
+      "rejectUnauthorized": false
+    }
+  ]
+}

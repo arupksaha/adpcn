@@ -1,0 +1,543 @@
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: 'FontADP';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.icon-powered-by-adp:before {
+  content: url('ADP_logo.png');
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+i#adpIcon {
+    padding-right: 5px;
+    padding-right: 0;
+    padding-left: 5px;
+    color: #ffffff;
+    margin-left: 2px;
+    padding: 0;
+    text-align: right;
+    font-size: 64px;
+    color: #ffffff;
+    width: 30px;
+}
+.adp-dashboard {
+  /* Side Menu */
+}
+.adp-dashboard.no-bg {
+  background: none;
+}
+.adp-dashboard .adp-logo-wrapper {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.adp-dashboard .adp-logo-wrapper > i {
+  font-size: 40px;
+  color: #ffffff;
+}
+.adp-dashboard .adp-logo-wrapper > i.icon-adp {
+  color: #940a0a;
+}
+.adp-dashboard .adp-dashboard-sponsor {
+  text-align: right;
+  font-size: 64px;
+  color: #ffffff;
+}
+.adp-dashboard .adp-dashboard-container {
+  overflow: hidden;
+  background: rgba(245, 245, 245, 0.95);
+  padding-right: 0;
+  padding-left: 0;
+  min-width: 300px;
+  min-height: 100%;
+}
+.adp-dashboard .adp-dashboard-container .page-container {
+  width: 100%;
+  margin-left: 85px;
+  padding-right: 85px;
+}
+.adp-dashboard .adp-dashboard-container .page-container .top-nav {
+  background-color: #ffffff;
+  width: 100%;
+  padding: 15px;
+}
+.adp-dashboard .adp-dashboard-container .page-container .top-nav .btn.btn-nav-toggle {
+  font-size: 24px;
+  margin-right: 15px;
+  margin-top: 7px;
+}
+.adp-dashboard .adp-dashboard-container .page-container .top-nav .adp-dashboard-title {
+  float: left;
+  padding-left: 5px;
+  margin: 6px 0 0;
+}
+.adp-dashboard .adp-dashboard-container .page-container .top-nav .top-search {
+  margin-right: 20px;
+}
+.adp-dashboard .adp-dashboard-container .page-container .top-nav .top-search .form-group {
+  margin-bottom: 0;
+}
+.adp-dashboard .adp-dashboard-container .page-container .top-nav .top-search .form-group .adp-search .btn {
+  top: 5px;
+}
+.adp-dashboard .adp-dashboard-container .page-container .top-nav .top-search .form-group .adp-search .form-control {
+  height: 46px;
+  font-size: 18px;
+  background-color: #ebebeb;
+  min-width: 350px;
+}
+.adp-dashboard .adp-dashboard-container .page-container .page-content {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 15px;
+}
+.adp-dashboard .adp-dashboard-container .page-container.full-width {
+  margin-left: 0;
+  padding-right: 0;
+}
+.adp-dashboard .adp-dashboard-container .adp-dashboard-content {
+  margin-top: 15px;
+}
+.adp-dashboard .page-sidebar {
+  background-color: transparent;
+  position: absolute;
+  width: 85px;
+  height: 100%;
+  overflow: hidden;
+}
+.adp-dashboard .page-sidebar,
+.adp-dashboard .page-sidebar ul {
+  width: 275px;
+}
+.adp-dashboard .page-sidebar > ul.menu {
+  background-color: #0e5061;
+  /* overridden in brandable.less */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+.adp-dashboard .page-sidebar > ul.menu > li {
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  opacity: 1;
+  /* this overlays white bg but with a transparency to produce a lighter hover bg color */
+}
+.adp-dashboard .page-sidebar > ul.menu > li.item-disabled {
+  cursor: default;
+}
+.adp-dashboard .page-sidebar > ul.menu > li:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.adp-dashboard .page-sidebar > ul.menu > li > a {
+  display: block;
+  position: relative;
+  color: #ffffff;
+  text-align: left;
+  text-decoration: none !important;
+  background-color: transparent;
+  margin: 0;
+  border: 0;
+  padding: 10px 0;
+  height: 75px;
+  font-family: inherit;
+  font-weight: 300;
+  /* This code puts the selected arrow over nav item */
+}
+.adp-dashboard .page-sidebar > ul.menu > li > a.active:after,
+.adp-dashboard .page-sidebar > ul.menu > li > a.nav-arrow-first:after {
+  font-family: FontAwesome;
+  content: "\f0d9";
+  /* fa-caret-left */
+  font-size: 36px;
+  position: absolute;
+  top: 10px;
+  right: -2px;
+  color: #ebebeb;
+}
+.adp-dashboard .page-sidebar > ul.menu > li > a.nav-arrow:hover::after,
+.adp-dashboard .page-sidebar > ul.menu > li > a.nav-arrow.active::after {
+  color: #ebebeb;
+}
+.adp-dashboard .page-sidebar > ul.menu > li > a.nav-arrow-first:hover::after,
+.adp-dashboard .page-sidebar > ul.menu > li > a.nav-arrow-first.active::after {
+  color: #ffffff;
+}
+@media (max-width: 992px) {
+  .adp-dashboard .page-sidebar > ul.menu > li > a.nav-arrow-first:hover::after,
+  .adp-dashboard .page-sidebar > ul.menu > li > a.nav-arrow-first.active::after {
+    color: #ebebeb;
+  }
+}
+.adp-dashboard .page-sidebar > ul.menu > li.active > a {
+  color: #ffffff;
+}
+.adp-dashboard .page-sidebar .nav-profile {
+  overflow: auto;
+  padding: 15px;
+}
+.adp-dashboard .page-sidebar .nav-profile .position {
+  font-weight: 200;
+  font-size: 14px;
+}
+.adp-dashboard .page-sidebar .nav-profile button {
+  margin-top: 5px;
+}
+.adp-dashboard .page-sidebar > ul > li {
+  background-position: 15px center;
+  background-size: 35px auto;
+}
+.adp-dashboard .page-sidebar > ul > li .adp-fa-icon-dashboard:before,
+.adp-dashboard .page-sidebar > ul > li .adp-fa-icon-onboarding:before {
+  content: "\e609";
+}
+.adp-dashboard .page-sidebar > ul > li .adp-fa-icon-demo:before {
+  content: "\e611";
+  font-size: 28px;
+}
+.adp-dashboard .page-sidebar > ul > li .adp-fa-icon-pay:before {
+  content: "\e601";
+}
+.adp-dashboard .page-sidebar > ul > li .adp-fa-icon-timeoff:before {
+  content: "\e603";
+}
+.adp-dashboard .page-sidebar > ul > li .adp-fa-icon-connections:before {
+  content: "\e60a";
+}
+.adp-dashboard .page-sidebar > ul > li .adp-fa-icon-benefits:before {
+  content: "\e605";
+}
+.adp-dashboard .page-sidebar > ul > li .adp-fa-icon-policies:before {
+  content: "\e606";
+}
+.adp-dashboard .page-sidebar > ul > li .adp-fa-icon-company:before {
+  content: "\e612";
+}
+.adp-dashboard .page-sidebar > ul > li .adp-fa-icon-timecard:before {
+  content: "\e602";
+}
+.adp-dashboard .page-sidebar > ul > li .adp-fa-icon-calendar:before {
+  content: "\e600";
+}
+.adp-dashboard .page-sidebar > ul > li .adp-fa-icon-admin:before {
+  content: "\e610";
+}
+.adp-dashboard .page-sidebar > ul > li .settings:before,
+.adp-dashboard .page-sidebar > ul > li .tour:before,
+.adp-dashboard .page-sidebar > ul > li .logout:before {
+  font-family: FontAwesome;
+  color: #ffffff;
+  font-size: 3em;
+  float: left;
+  margin-top: 8px;
+  padding-left: 15px;
+}
+.adp-dashboard .page-sidebar > ul > li .settings:before {
+  content: "\f013";
+}
+.adp-dashboard .page-sidebar > ul > li .tour:before {
+  content: "\f018";
+}
+.adp-dashboard .page-sidebar > ul > li .logout:before {
+  content: "\f011";
+}
+.adp-dashboard .page-sidebar > ul > li .feedback:before {
+  content: "\f118";
+}
+.adp-dashboard .page-sidebar > ul > li .talent:before {
+  content: "\f091";
+}
+.adp-dashboard .page-sidebar > ul > li a {
+  font-size: 18px;
+}
+.adp-dashboard .menu-close .page-sidebar {
+  left: -275px;
+}
+.adp-dashboard .menu-close .page-container {
+  margin-left: 0;
+  padding-right: 0;
+}
+.adp-dashboard .menu-open .page-sidebar {
+  left: 0;
+}
+.adp-dashboard .menu-open .page-container {
+  margin-left: 275px;
+  padding-right: 0;
+}
+@media (max-width: 992px) {
+  .adp-dashboard .adp-dashboard-container .page-container .top-nav .top-search .form-group .adp-search .form-control {
+    min-width: 200px;
+  }
+  .adp-dashboard .page-sidebar {
+    position: absolute;
+    margin: 0;
+    overflow: visible !important;
+  }
+  .adp-dashboard .page-sidebar > ul > li .adp-fa-icon-dashboard:before,
+  .adp-dashboard .page-sidebar > ul > li .adp-fa-icon-pay:before,
+  .adp-dashboard .page-sidebar > ul > li .adp-fa-icon-timeoff:before,
+  .adp-dashboard .page-sidebar > ul > li .adp-fa-icon-connections:before,
+  .adp-dashboard .page-sidebar > ul > li .adp-fa-icon-benefits:before,
+  .adp-dashboard .page-sidebar > ul > li .adp-fa-icon-onboarding:before,
+  .adp-dashboard .page-sidebar > ul > li .adp-fa-icon-demo:before,
+  .adp-dashboard .page-sidebar > ul > li .adp-fa-icon-policies:before,
+  .adp-dashboard .page-sidebar > ul > li .adp-fa-icon-company:before,
+  .adp-dashboard .page-sidebar > ul > li .adp-fa-icon-calendar:before,
+  .adp-dashboard .page-sidebar > ul > li .adp-fa-icon-timecard:before,
+  .adp-dashboard .page-sidebar > ul > li .adp-fa-icon-admin:before {
+    font-family: adp-font-awesome;
+    color: #ffffff;
+    font-size: 30px;
+    float: left;
+    padding-left: 15px;
+    padding-top: 20px;
+  }
+  .adp-dashboard .page-sidebar > ul > li .talent:before,
+  .adp-dashboard .page-sidebar > ul > li .feedback:before {
+    font-family: FontAwesome;
+    color: #ffffff;
+    font-size: 30px;
+    float: left;
+    padding-left: 15px;
+    padding-top: 20px;
+  }
+  .adp-dashboard .page-sidebar > ul > li .tour:before {
+    padding-top: 3px;
+    font-size: 34px;
+  }
+  .adp-dashboard .page-sidebar > ul.menu > li > a .fa {
+    font-size: 30px;
+    margin: 0 15px;
+  }
+}
+@media (max-width: 768px) {
+  .adp-dashboard .page-sidebar {
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+  .adp-dashboard .page-sidebar > ul > li > a.nav-arrow-first:hover::after,
+  .adp-dashboard .page-sidebar > ul > li > a.nav-arrow-first.active::after {
+    color: #ebebeb;
+  }
+}
+/*** Phones ***/
+@media (max-width: 480px) {
+  .page-sidebar {
+    overflow-x: hidden;
+  }
+  .page-sidebar > ul > li > a.nav-arrow-first:hover::after,
+  .page-sidebar > ul > li > a.nav-arrow-first.active::after {
+    color: #ebebeb;
+  }
+}
+/* Height fixes */
+@media screen and (max-height: 750px) {
+  .page-content {
+    min-height: 750px;
+  }
+}
+@media screen and (min-height: 751px) {
+  .page-content {
+    min-height: 1024px;
+  }
+}
+/* Greater than mobile */
+@media (min-width: 992px) {
+  .adp-dashboard .top-nav {
+    padding: 15px 10px;
+  }
+  .adp-dashboard #side-toggle {
+    font-size: 28px;
+    padding: 2px 20px 0 10px;
+  }
+  .adp-dashboard .page-sidebar,
+  .adp-dashboard .page-sidebar ul {
+    width: 85px;
+  }
+  .adp-dashboard .page-sidebar > ul.menu > li {
+    background-position: center 15px;
+    color: #ffffff;
+  }
+  .adp-dashboard .page-sidebar > ul.menu > li > a {
+    text-align: center;
+    font-size: 12px;
+    font-weight: 200;
+    padding-top: 15px;
+  }
+  .adp-dashboard .page-sidebar > ul.menu > li > a i {
+    display: block;
+    font-size: 28px;
+  }
+  .adp-dashboard .page-sidebar > ul.menu > li > div:before {
+    font-family: adp-font-awesome;
+    color: #ffffff;
+    font-size: 30px;
+    float: left;
+    vertical-align: middle;
+    text-align: center;
+    display: block;
+    width: 100%;
+    padding-top: 15px;
+  }
+  .adp-dashboard .page-sidebar > ul.menu > li .talent:before,
+  .adp-dashboard .page-sidebar > ul.menu > li .feedback:before {
+    font-family: FontAwesome;
+    color: #ffffff;
+    font-size: 30px;
+    float: left;
+    vertical-align: middle;
+    text-align: center;
+    display: block;
+    width: 100%;
+    padding-top: 15px;
+  }
+  .adp-dashboard .menu-open .page-sidebar {
+    left: 0;
+  }
+  .adp-dashboard .menu-open .page-container {
+    margin-left: 85px;
+    padding-right: 85px;
+  }
+  .adp-dashboard .menu-open .adp-footer {
+    padding-left: 85px;
+  }
+  .adp-dashboard .menu-close .page-sidebar {
+    left: -85px;
+  }
+  .adp-dashboard .menu-close .page-container {
+    margin-left: 0;
+    padding-right: 0;
+  }
+}
+/* Tile Styles */
+.adp-tile {
+  float: left;
+  width: 32.33333%;
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 3px;
+  box-shadow: 0 0 2px 0 #bbbbbb;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+}
+.adp-tile.half-tile {
+  width: 49.4%;
+}
+.adp-tile.two-columns-tile {
+  width: 66.16667%;
+}
+.adp-tile.three-columns-tile {
+  width: 100%;
+}
+.adp-tile:hover {
+  background-color: rgba(252, 252, 252, 0.9);
+  box-shadow: #bbbbbb 0 0 8px 0;
+}
+.adp-tile:hover .tasks-line-text {
+  background: #f5f5f5;
+}
+.adp-tile .tile-close {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  font-size: 18px;
+}
+.adp-tile .tile-close:hover {
+  opacity: .5;
+  color: inherit;
+  cursor: pointer;
+}
+.adp-tile .tile-title {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  border-bottom: 1px solid #bbbbbb;
+  padding: 0 0 5px;
+  margin: 10px 0 25px;
+}
+.adp-tile .btn-secondary:disabled,
+.adp-tile .btn-bordered:disabled {
+  color: #ffffff;
+  border: 2px solid #959595;
+}
+.adp-tile .btn-container {
+  padding: 0 0 10px 0;
+}
+.tile-content {
+  min-height: 100px;
+  position: relative;
+}
+.hidden-tile {
+  display: none;
+}
+.adp-hidden-content {
+  max-height: 0;
+  overflow: hidden;
+  padding-bottom: 20px;
+  transition-property: max-height;
+  transition-duration: .5s;
+  transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+}
+.adp-hidden-content.active {
+  max-height: 500px;
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .isotope-two-column-width,
+  .isotope-three-column-width {
+    width: 49%;
+  }
+  .isotope-two-column-gutter,
+  .isotope-three-column-gutter {
+    width: 2%;
+  }
+  .isotope-four-column-width {
+    width: 32.33333%;
+  }
+  .isotope-four-column-gutter {
+    width: 1.5%;
+  }
+  .adp-tile {
+    width: 49%;
+  }
+}
+@media (max-width: 768px) {
+  .isotope-two-column-width,
+  .isotope-three-column-width,
+  .isotope-four-column-width {
+    width: 100%;
+  }
+  .adp-tile {
+    width: 100%;
+  }
+}
+/* Small */
+@media (min-width: 768px) {
+  .adp-tile,
+  .hidden-tile {
+    padding: 10px 15px;
+  }
+}

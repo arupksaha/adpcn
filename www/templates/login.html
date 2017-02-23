@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="" data-ng-app="loginPageApp" data-ng-controller="loginController">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <script type="text/javascript">
+
+    if(!window.console) {
+        var console = {
+            log : function(){},
+            warn : function(){},
+            error : function(){},
+            time : function(){},
+            timeEnd : function(){}
+        }
+    }
+
+    </script>
+
+    <meta name="robots" content="noindex, nofollow">
+    <title>ADP Login</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="inc/css/lib/fontawesome/css/font-awesome.min.css" />
+
+    <!-- VDL Base -->
+    <link rel="stylesheet" href="inc/css/base.css" />
+
+    <!-- VDL Popovers -->
+    <link rel="stylesheet" href="inc/css/popovers.css" />
+
+    <!-- VDL Inline Messages -->
+    <link rel="stylesheet" href="inc/css/inline-messages.css" />
+
+    <!-- Our Login Page Styles -->
+    <link rel="stylesheet" href="inc/css/login.css" />
+    
+    <!--  load angular in the head to get better results for ngCloak -->
+    <script src="inc/js/lib/angular.min.js"></script>
+</head>
+<body onload="verifyBrowserSupport()" data-ng-style="{'background-image': 'url({{backgroundImage}})'}">
+
+<!-- Google Digital Marketing Pixel -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-KH3TMH"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KH3TMH');</script>
+<!-- End Google Pixel --> 
+
+<script>
+    function verifyBrowserSupport() {
+        var nAgt = navigator.userAgent;
+        if(nAgt.indexOf('MSIE') !== -1) {
+            if((document.all && !document.querySelector) ||
+                    (document.all && document.querySelector && !document.addEventListener)) {
+                //window.location.href = 'unsupported-browser.html';
+                alert("Unsupported browser, UserAgent: " + nAgt);
+            }
+        }
+    }
+</script>
+
+
+<div class="container-fluid">
+    <div class="row-fluid site-logo" data-ng-show="showADPIcon">
+        <div class="col-md-12">
+            <h1><i class="icon-adp"></i></h1>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row-fluid site-logo" data-ng-show="showCustomImage">
+        <div class="col-md-12">
+            <h1><img style="max-height:60px;" data-ng-src={{brandImage}}></h1>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="login-page-container">
+        <adp-inline-message
+                data-ng-if="showMessage"
+                data-type={{dataType}}
+                data-icon={{messageIcon}}
+                data-small="true"
+                data-message="{{'msg.msgOfTheDay' | translate}}"
+                data-ng-click="setMsgOfTheDay(false)">
+        </adp-inline-message>
+        <div class="login-error" >
+            <adp-inline-message
+                data-type="danger"
+                data-icon="fa fa-exclamation-circle"
+                data-small="true"
+                data-message="{{'msg.loginErrorMsg' | translate}}"
+                data-ng-if="loginError"
+                data-ng-click="setLoginError(false)">
+            </adp-inline-message>
+        </div>
+        <!-- .login-error -->
+        
+        
+        <div class="login-content bg-white-opaque">
+            
+            <!-- .language-popover -->
+            <div class="row welcome-title">
+                <div class="col-md-12">
+                    <h1>Welcome </h1>
+                </div>
+            </div>
+            <!-- .welcome-title -->
+
+
+            <div data-ngcloak  class="row login-form">
+                <div class="col-md-12">
+				<form class="adp-form" name="form" role="form" >
+                           
+                            <div class="form-group user-id">
+                                <div class="row">
+                                    <div class="col-sm-6 col-xs-12">
+                                        <label for="user_id">Network ID</label>
+                                    </div>
+
+                                </div>
+                                <div class="input-group-full">
+                                    <input type="text" class="form-control" name="user" id="user_id" data-ng-model="userName" required />
+                                    <i class="fa fa-user"></i>
+                                </div>
+                            </div>
+                            <!-- .user-id -->
+
+                            <div class="form-group user-remember">
+                                <input type="checkbox" data-ng-disabled="idContainsADP()" id="remember_user_id" name="remember_user_id" data-ng-model="loginForm.remember"
+                                       class="adp-checkbox" data-ng-change='rememberUserIdChange()' />
+                                <label for="remember_user_id">
+                                    Remember My User ID
+                                    <a class="popover-trigger" popover-placement="top" uib-popover="{{'msg.userIdPopoverMsg' | translate}}" popover-is-open="false" popover-append-to-body="true">
+                                        <i class="fa fa-question-circle"></i>
+                                    </a>
+                                </label>
+                                <adp-inline-message data-type="warning"
+                                                    data-icon="fa fa-exclamation-triangle"
+                                                    data-small="true"
+                                                    data-message="{{'msg.userIdAlertMsg' | translate}}"
+                                                    data-ng-if="showUserIDAlert">
+                                </adp-inline-message>
+
+                                <adp-inline-message data-type="danger"
+                                                    data-icon="fa fa-exclamation-circle"
+                                                    data-small="true"
+                                                    data-message="{{'msg.ADPIdAlertMsg' | translate}}"
+                                                    data-ng-if="showADPIDAlert">
+                                </adp-inline-message>
+
+                            </div>
+                            <!-- .user-remember -->
+
+                            <div class="form-group password">
+                                <label for="password">Password (case sensitive)</label>
+                                <div class="input-group-full">
+                                    <input type="password" class="form-control" name="password" id="password" data-ng-model="password" data-ng-maxlength="256" required />
+                                    <i class="fa fa-lock"></i>
+                                </div>
+                            </div>
+                            <div class="form-group submit text-center">
+                                <button type="submit" class="btn btn-primary" data-ng-click="login()" data-ng-disabled="!form.$valid">
+                                    Sign In
+                                </button>
+                            </div>
+                            <!-- .password -->
+
+
+                        </form>
+                </div>
+            </div>
+            <!-- .login-form -->
+
+        </div>
+        <!-- .login-content -->
+
+
+       
+        <!-- login-footer  -->
+    <!-- login-page-container -->
+</div>
+
+    <div data-ngcloak  class="row">
+        <div class="col-md-12">
+            <div class="adp-footer">
+                <ul>
+                    <li data-ng-show="showFeedback">
+                        <a data-ng-href="{{'url.feedback' | translate}}">{{"footer.feedback" | translate}}</a>
+                    </li>
+                    <li data-ng-show="showPrivacy">
+                        <a ng-click="showPrivacyInNewWindow();">
+                            <i class="fa fa-external-link"></i>
+                            {{"footer.privacy" | translate}}
+                        </a>
+                    </li>
+                    <li data-ng-show="showLegal">
+                        <a ng-click="showLegalInNewWindow();">
+                            <i class="fa fa-external-link"></i>
+                            {{"footer.legal" | translate}}
+                        </a>
+                    </li>
+                    <li data-ng-show="showAbout"><a ng-click="showAboutInNewWindow();">{{"footer.about" | translate}}</a></li>
+                    <li data-ng-show="showCompany" class="company">{{"footer.company" | translate}}</li>
+                </ul>
+            </div>
+            <!-- /adp-footer -->
+        </div>
+        <!-- /col-md-12 -->
+    </div>
+    <!-- /row -->
+  </div>
+
+</div>
+<!-- .container -->
+
+<!-- Dependencies: This component requires jQuery also -->
+<script src="inc/js/lib/ui-bootstrap-tpls.min.js"></script>
+<script src="inc/js/lib/angular-cookies.min.js"></script>
+<script src="inc/js/lib/angular-messages.min.js"></script>
+<script src="inc/js/lib/angular-translate.min.js"></script>
+<script src="inc/js/lib/angular-translate-loader-static-files.min.js"></script>
+
+<script src="inc/js/config.js"></script>
+<script src="inc/js/app.js"></script>
+
+<!-- Include VDL Directives -->
+<script src="inc/js/vdl/directives/inline-message-directive.js"></script>
+
+<!-- Include our controllers -->
+<script src="inc/js/controllers/login-controller.js"></script>
+
+</body>
+</html>
